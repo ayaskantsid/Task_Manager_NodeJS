@@ -6,9 +6,11 @@ app.use(express.json())
 
 app.use('/',express.static(__dirname+'/public'))
 
+app.set( 'port', ( process.env.PORT || 5880 ));
+
 db.sync()
     .then(()=>{
-        app.listen(5600)
+        app.listen(app.get( 'port' ))
     })
     .catch((err)=>{
         console.log(err)

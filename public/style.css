@@ -1,0 +1,125 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0% 10% 0% 10%;
+    background-color: #B2EBF2;
+}
+h1{
+    background-color: #26C6DA;
+    padding: 2% 0% 2% 0%;
+    color: white;
+}
+.page{
+    background-color: cornsilk;
+}
+.form{
+    padding: 4px 10px 10px 10px;
+    background-image: url(background.png);
+}
+
+#table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#table td, #table th {
+    
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#table tr:nth-child(even){background-color: #f2f2f2;}
+  
+#table tr:hover {background-color: #ddd;}
+  
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #26C6DA;
+    color: white;
+}
+
+input[type=text], select {
+    width: 70%;
+    padding: 5px 10px;
+    margin: 10px 10px;
+    display: inline-block;
+    border: 1px solid #0097A7;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=date], select {
+    width: 25%;
+    padding: 5px 10px;
+    margin: 8px 8px;
+    display: inline-block;
+    border: 1px solid #0097A7;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=button], button {
+    background-color: #1976D2;
+    color: white;
+    padding: 5px 10px;
+    margin: 8px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=button]:hover {
+    background-color: #0D47A1;
+}
+
+.notes{
+    display: none;
+}
+
+/* Edit Portal */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+
+    border: 1px solid #888;
+    width: 80%;
+}
+  
+  /* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bolder;
+    padding: 10px;
+    padding-right: 15px;
+}
+  
+.close:hover,
+.close:focus {
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.editHeader{
+    height : 50px;
+    background-color: #1976D2;
+}
