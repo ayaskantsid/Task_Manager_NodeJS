@@ -26,11 +26,16 @@ const Tasks = db.define('Tasks',{
         allowNull:false
     },
 
-    status:{
-        type:sequelize.BOOLEAN,
+    priority:{
+        type:sequelize.ENUM,
         values:['high','medium','low'],
         defaultValue:true,
         allowNull:false
+    },
+
+    status:{
+        type : sequelize.BOOLEAN,
+        defaultValue : true
     }
 })
 
@@ -50,7 +55,7 @@ const Notes = db.define('notes',{
 Tasks.hasMany(Notes)
 Notes.belongsTo(Tasks)
 
-module.export = {
+module.exports = {
     db,
     Tasks,
     Notes
