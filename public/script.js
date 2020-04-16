@@ -1,5 +1,3 @@
-//const url = "todo4256.herokuapp.com/";
-
 async function getData(){
     let res = await fetch("/todo")
     let data = await res.json()
@@ -19,7 +17,7 @@ const modal = document.getElementById("myModal")
 let today = new Date()
 let tomorrow = new Date(today)
 tomorrow.setDate(tomorrow.getDate() + 1)
-tomorrow.setHours(tomorrow.getHours()+6)
+tomorrow.setHours(tomorrow.getHours()+6)  //to handle IST
 due.defaultValue = tomorrow.toJSON().substring(0,10)
 
 function addToTable(data){
