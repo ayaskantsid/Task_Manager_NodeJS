@@ -2,10 +2,10 @@ const sequelize = require('sequelize')
 
 const db = new sequelize({
     dialect:'sqlite',
-    storage:__dirname+'/TaskManager.db'
+    storage:__dirname+'/todos.db'
 })
 
-const Tasks = db.define('Tasks',{
+const Todos = db.define('Todos',{
     id:{
         type:sequelize.INTEGER,
         autoIncrement:true,
@@ -21,7 +21,7 @@ const Tasks = db.define('Tasks',{
         type:sequelize.STRING
     },
 
-    dueDate:{
+    due:{
         type:sequelize.DATEONLY,
         allowNull:false
     },
@@ -39,7 +39,7 @@ const Tasks = db.define('Tasks',{
     }
 })
 
-const Notes = db.define('notes',{
+const notes = db.define('notes',{
     id:{
         type:sequelize.INTEGER,
         autoIncrement:true,
@@ -52,11 +52,11 @@ const Notes = db.define('notes',{
 })
 
 
-Tasks.hasMany(Notes)
-Notes.belongsTo(Tasks)
+Todos.hasMany(notes)
+notes.belongsTo(Todos)
 
 module.exports = {
     db,
-    Tasks,
-    Notes
+    Todos,
+    notes
 }
